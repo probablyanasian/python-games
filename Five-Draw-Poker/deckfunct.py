@@ -8,3 +8,12 @@ def newdeck():
 def randcard(deck):
     return deck.pop(random.randint(0,len(deck)-1))
 
+def clear():
+    global humanvalues
+    global machinevalues
+    global humanhand
+    global machinehand
+    humanvalues = [0, 0, 0]
+    machinevalues = [0, 0, 0]
+    humanhand = []
+    machinehand = []
