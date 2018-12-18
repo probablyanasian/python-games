@@ -5,15 +5,10 @@ def newdeck():
   random.shuffle(deck)
   return deck
 
-def randcard(deck):
-    return deck.pop(random.randint(0,len(deck)-1))
+def randcard(deck, num):
+    retval = []
+    for _ in range(num):
+        retval.append(deck.pop(random.randint(0,len(deck)-1)))
+    return retval
 
-def clear():
-    global humanvalues
-    global machinevalues
-    global humanhand
-    global machinehand
-    humanvalues = [0, 0, 0]
-    machinevalues = [0, 0, 0]
-    humanhand = []
-    machinehand = []
+    
