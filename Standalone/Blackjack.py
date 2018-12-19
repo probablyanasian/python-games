@@ -52,7 +52,7 @@ def ending(humanvalue, machinevalue):
         return ("human won")
 
 def newdeck():
-  suits='CSDH'; vals='A1234567890JQK'
+  suits='CSDH'; vals='A234567890JQK'
   deck=[suits[i//13]+vals[i%13] for i in range(52)]
   random.shuffle(deck)
   return deck
@@ -84,8 +84,10 @@ while True:
         machinevalue = calcval(machinehand, machinehasa)
     if humanvalue > 21:
         print(ending(humanvalue, machinevalue))
+        clear()
     if uinput == "stand":
         print(ending(humanvalue, machinevalue))
+        clear()
 
     print(humanhand)
     print(humanvalue)
